@@ -1,5 +1,12 @@
-import React from "react";
+import Share from "../Share/Share";
+import "./Feeds.css";
 
 export default function Feeds() {
-  return <div>Feeds</div>;
+  return (
+    <div className="feeds">
+      <div className="wrapper">
+        <Share />
+      </div>
+    </div>
+  );
 }
