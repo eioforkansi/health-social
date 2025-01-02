@@ -5,35 +5,35 @@ import { Chat, Notifications, Person, Search } from "@material-ui/icons";
 export default function Topbar() {
   return (
     <div className="topbar">
-      <div className="left">
-        <div className="logo">
+      <div className="topbar-left">
+        <div className="topbar-logo">
           <h1>
             Health<span>Social</span>
           </h1>
         </div>
       </div>
-      <div className="center">
-        <Search className="search" />
+      <div className="topbar-center">
+        <Search className="topbar-search" />
         <input placeholder="search for post, people or video" type="text" />
       </div>
 
-      <div className="right">
-        <div className="links">
+      <div className="topbar-right">
+        <div className="topbar-links">
           <h1>Home</h1>
           <h1>Timeline</h1>
         </div>
-        <div className="icons">
-          <Badge className="badge" badgeContent={1} color="secondary">
+        <div className="topbar-icons">
+          <Badge className="topbar-badge" badgeContent={1} color="secondary">
             <Person />
           </Badge>
-          <Badge className="badge" badgeContent={1} color="secondary">
+          <Badge className="topbar-badge" badgeContent={1} color="secondary">
             <Chat />
           </Badge>
-          <Badge className="badge" badgeContent={1} color="secondary">
+          <Badge className="topbar-badge" badgeContent={1} color="secondary">
             <Notifications />
           </Badge>
         </div>
-        <img src="/assets/person/1.jpeg" alt="" className="profile" />
+        <img src="/assets/person/1.jpeg" alt="" className="topbar-profile" />
       </div>
     </div>
   );

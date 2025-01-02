@@ -2,28 +2,38 @@
   flex: 2.5;
   height: calc(100vh - 50px);
   overflow-y: scroll;
+  position: sticky;
+  top: 50px;
 
-  .wrapper {
-    padding: 25px;
+  .leftbar-wrapper {
+    padding: 15px;
   }
 
-  .list {
+  .leftbar-list {
     padding: 0;
     margin: 0;
     list-style: none;
   }
 
-  .item {
+  .leftbar-item {
+    width: 100%;
+    padding: 3px 3px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
   }
 
-  .icon {
+  .leftbar-item:hover {
+    background-color: #f0f0f0;
+  }
+
+  .leftbar-icon {
     margin-right: 20px;
   }
 
-  .button {
+  .leftbar-button {
     width: 150px;
     border: none;
     padding: 10px;
@@ -31,23 +41,23 @@
     font-weight: bold;
   }
 
-  .hr {
+  .leftbar-hr {
     margin: 20px 0;
   }
 
-  .friend-list {
+  .leftbar-friend-list {
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  .friend {
+  .leftbar-friend {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
   }
 
-  .friend-img {
+  .leftbar-friend-img {
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -61,9 +71,10 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgb(36, 35, 35);
+  background-color: #f0f0f0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #f0f0f0;
+  background-color: #b3b0b0;
+  border-radius: 10px;
 }

@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Topbar />
-      <div style={{ display: "flex", height: "calc(100vh - 50px)" }}>
+      <div style={{ display: "flex", width: "100%" }}>
         <Leftbar />
         <Feeds />
         <Rightbar />
