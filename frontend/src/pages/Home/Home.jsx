@@ -1,3 +1,4 @@
+import "./Home.css";
 import Feeds from "../../components/Feeds/Feeds";
 import Leftbar from "../../components/Leftbar/Leftbar";
 import Rightbar from "../../components/Rightbar/Rightbar";
@@ -7,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Topbar />
-      <div style={{ display: "flex", width: "100%" }}>
+      <div className="home">
         <Leftbar />
         <Feeds />
         <Rightbar />

@@ -1,3 +1,5 @@
+import Friends from "../Friends/Friends";
+import { Users } from "../../dummyData";
 import "./Leftbar.css";
 import {
   RssFeed,
@@ -56,70 +58,9 @@ export default function Leftbar() {
         <button className="leftbar-button">Show More</button>
         <hr className="leftbar-hr" />
         <ul className="leftbar-friend-list">
-          <li className="leftbar-friend">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="leftbar-friend-img"
-            />
-            <span className="leftbar-friend-name">Emeka Oforkansi</span>
-          </li>
-          <li className="leftbar-friend">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="leftbar-friend-img"
-            />
-            <span className="leftbar-friend-name">Emeka Oforkansi</span>
-          </li>
-          <li className="leftbar-friend">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="leftbar-friend-img"
-            />
-            <span className="leftbar-friend-name">Emeka Oforkansi</span>
-          </li>
-          <li className="leftbar-friend">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="leftbar-friend-img"
-            />
-            <span className="leftbar-friend-name">Emeka Oforkansi</span>
-          </li>
-          <li className="leftbar-friend">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="leftbar-friend-img"
-            />
-            <span className="leftbar-friend-name">Emeka Oforkansi</span>
-          </li>
-          <li className="leftbar-friend">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="leftbar-friend-img"
-            />
-            <span className="leftbar-friend-name">Emeka Oforkansi</span>
-          </li>
-          <li className="leftbar-friend">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="leftbar-friend-img"
-            />
-            <span className="leftbar-friend-name">Emeka Oforkansi</span>
-          </li>
-          <li className="leftbar-friend">
-            <img
-              src="/assets/person/2.jpeg"
-              alt=""
-              className="leftbar-friend-img"
-            />
-            <span className="leftbar-friend-name">Emeka Oforkansi</span>
-          </li>
+          {Users.map((item) => (
+            <Friends key={item.id} user={item} />
+          ))}
         </ul>
       </div>
     </div>

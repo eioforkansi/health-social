@@ -38,3 +38,43 @@
 .rightbar-title {
   margin-bottom: 15px;
 }
+
+.rightbar-info {
+  margin-bottom: 15px;
+}
+
+.rightbar-info-key {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.rightbar-hr {
+  width: 95%;
+  margin-bottom: 15px;
+}
+
+.rightbar-followings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.rightbar-following {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.rightbar-following-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  object-fit: cover;
+  margin: 10px;
+}
+
+.rightbar-following-img:hover {
+  width: 120px;
+  height: 120px;
+}

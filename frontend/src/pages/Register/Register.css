@@ -1,0 +1,90 @@
+.registeration {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.registeration-wrapper {
+  height: 70%;
+  width: 70%;
+  display: flex;
+}
+
+.registeration-left,
+.registeration-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.registeration-logo {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.registeration-desc {
+  font-size: 24px;
+}
+
+.registeration-box {
+  height: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box-title {
+  margin-bottom: 10px;
+}
+
+.registeration-input {
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-size: 18px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.registeration-input:focus {
+  outline: none;
+}
+
+.registeration-button {
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: tomato;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.registeration-forgot {
+  text-align: center;
+  color: #1775ee;
+  margin-bottom: 10px;
+}
+
+.registeration-register-button {
+  width: 60%;
+  align-self: center;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: teal;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
