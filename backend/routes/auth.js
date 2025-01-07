@@ -1,6 +1,6 @@
 import express from "express";
 import bcrypt from "bcrypt";
-import User from "../modules/User.js";
+import User from "../models/User.js";
 const router = express.Router();
 
 // Register user
@@ -9,6 +9,16 @@ router.post("/register", async (req, res) => {
     // Hash user password
     const salt = await bcrypt.genSalt(10);
     const password = await bcrypt.hash(req.body.password, salt);
+
+    // Check email
+    const userEmailCheck = await User.findOne({
+      email: req.body.email,
+    });
+
+    if (userEmailCheck) {
+      return res.status(401).json("Email unavailable");
+    }
+
     // Create new user
     const user = await new User({
       username: req.body.username,
@@ -17,10 +27,10 @@ router.post("/register", async (req, res) => {
     });
     // Save new user
     await user.save();
-    res.status(200).json("User account created successfully");
+    res.status(200).json("User created");
   } catch (error) {
     console.log(error.message);
-    res.status(500).json("Some error occured!");
+    res.status(500).json("Internal server error");
   }
 });
 
@@ -42,7 +52,7 @@ router.post("/login", async (req, res) => {
     user && res.status(200).json("Login successful");
   } catch (error) {
     console.log(error.message);
-    res.status(500).json("Some error occured!");
+    res.status(500).json("Internal server error");
   }
 });
 
